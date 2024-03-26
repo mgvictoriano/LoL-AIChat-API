@@ -1,13 +1,13 @@
 package tech.mgaia.LoLChat.domain.ports;
 
-import tech.mgaia.LoLChat.domain.model.Champions;
+import tech.mgaia.LoLChat.domain.model.Champion;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface ChampionsRepository {
 
-    List<Champions> findAll();
+    List<Champion> findAll();
 
-    Optional<Champions> findById(Long id);
+    Optional<Champion> findById(Long id);
 }
