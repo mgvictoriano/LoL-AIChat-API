@@ -1,16 +1,20 @@
+package tech.mgaia.LoLChat.adapters.in;
 
-@Tag(name = "Campeões", description = "Endpoint do dominio de Campeões do LoL")
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import tech.mgaia.LoLChat.application.ListChampionsUseCase;
+import tech.mgaia.LoLChat.domain.model.Champion;
+
+import java.util.List;
+
 @RestController
-@RequestMapping(/Champions)
-public record ListChampionsRestController(listChampionsUseCase useCase) {
+@RequestMapping("/api/champions")
+public record ListChampionsRestController(ListChampionsUseCase useCase) {
 
-
-@GettingMapping
-public List<Champion> findAllChampions() {
-    return useCase.findAll();
-}
-
-
-
+    @GetMapping
+    public List<Champion> findAllChampions() {
+        return useCase.findAll();
+    }
 
 }
