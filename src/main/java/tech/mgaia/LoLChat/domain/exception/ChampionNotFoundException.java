@@ -1,4 +1,4 @@
-
+package tech.mgaia.LoLChat.domain.exception;
 
 public class ChampionNotFoundException extends RuntimeException {
 
