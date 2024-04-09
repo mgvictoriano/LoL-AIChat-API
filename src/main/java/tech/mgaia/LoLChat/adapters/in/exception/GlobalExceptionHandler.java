@@ -11,7 +11,7 @@ import tech.mgaia.LoLChat.domain.exception.ChampionNotFoundException;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-private Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
+private final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
 @ExceptionHandler(ChampionNotFoundException.class)
 public ResponseEntity<ApiError> handleDomainException(ChampionNotFoundException domainError) {
